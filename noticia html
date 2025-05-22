@@ -1,7 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<title>China mais aberta, EUA isolados e UE enfraquecida: como a guerra de tarifas deve mudar a geopolítica e criar uma nova ordem global
-</title>
-
-</html>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Notícia do Dia</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  h1 {
+    color: #2c3e50;
+    font-size: 2.75rem;
+    margin-bottom: 0.3rem;
+  }
+  h2 {
+    color: #34495e;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 1.5rem;
