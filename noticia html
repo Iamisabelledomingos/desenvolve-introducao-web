@@ -24,3 +24,50 @@
     font-weight: 400;
     font-style: italic;
     margin-bottom: 1.5rem;
+  }
+  p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  .highlight {
+    background-color: #fffbcc;
+    padding: 0 0.2rem;
+    border-radius: 3px;
+  }
+  .strong {
+    font-weight: 700;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .underline {
+    text-decoration: underline;
+  }
+  .small-text {
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .code {
+    font-family: monospace;
+    background: #e5e5e5;
+    padding: 0 0.3rem;
+    border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+  <h1>Descoberta Científica Revoluciona a Medicina Moderna</h1>
+  <h2>Novas técnicas genéticas prometem tratamentos personalizados e mais eficazes</h2>
+  
+  <p>A <span class="strong">comunidade científica</span> está em êxtase após a divulgação dos resultados de um estudo que pode transformar o tratamento de doenças crônicas. A pesquisa, realizada por um grupo internacional, focou no avanço da edição genética com a tecnologia <span class="code">CRISPR-Cas9</span>.</p>
+  
+  <p>O método, aprimorado recentemente, possibilita uma <span class="underline">correção precisa de mutações</span> em células afetadas, tornando o tratamento <span class="italic">mais seguro</span> e com menos efeitos colaterais. Isso abre as portas para terapias individualizadas que serão adaptadas ao perfil genético de cada paciente.</p>
+  
+  <p>Especialistas afirmam que esse avanço pode beneficiar milhões de pessoas com doenças como câncer, fibrose cística e distúrbios hereditários. Além disso, o processo é consideravelmente mais rápido do que as técnicas convencionais, o que torna o acesso mais viável e econômico.</p>
+  
+  <p class="highlight">Enquanto a tecnologia ainda está em fase de testes clínicos, as perspectivas são otimistas, e o investimento em pesquisas está crescendo aceleradamente. A expectativa é que, em poucos anos, essa verdadeira revolução chegue a hospitais do mundo inteiro.</p>
+  
+</body>
+</html>
+
+
