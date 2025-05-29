@@ -14,6 +14,29 @@
     color: #333;
     line-height: 1.6;
   }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 1rem;
+  }
+  .logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo span {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
   h1 {
     color: #2c3e50;
     font-size: 2.75rem;
@@ -53,20 +76,75 @@
     padding: 0 0.3rem;
     border-radius: 3px;
   }
+  main {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  article {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px #e0e0e0;
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  footer {
+    border-top: 2px solid #e1e1e1;
+    padding-top: 1rem;
+    text-align: center;
+  }
+  .social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .social-links li {
+    display: inline;
+  }
+  .social-links a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .social-links a:hover {
+    color: #2980b9;
+  }
 </style>
 </head>
 <body>
-  <h1>Descoberta Científica Revoluciona a Medicina Moderna</h1>
-  <h2>Novas técnicas genéticas prometem tratamentos personalizados e mais eficazes</h2>
-  
-  <p>A <span class="strong">comunidade científica</span> está em êxtase após a divulgação dos resultados de um estudo que pode transformar o tratamento de doenças crônicas. A pesquisa, realizada por um grupo internacional, focou no avanço da edição genética com a tecnologia <span class="code">CRISPR-Cas9</span>.</p>
-  
-  <p>O método, aprimorado recentemente, possibilita uma <span class="underline">correção precisa de mutações</span> em células afetadas, tornando o tratamento <span class="italic">mais seguro</span> e com menos efeitos colaterais. Isso abre as portas para terapias individualizadas que serão adaptadas ao perfil genético de cada paciente.</p>
-  
-  <p>Especialistas afirmam que esse avanço pode beneficiar milhões de pessoas com doenças como câncer, fibrose cística e distúrbios hereditários. Além disso, o processo é consideravelmente mais rápido do que as técnicas convencionais, o que torna o acesso mais viável e econômico.</p>
-  
-  <p class="highlight">Enquanto a tecnologia ainda está em fase de testes clínicos, as perspectivas são otimistas, e o investimento em pesquisas está crescendo aceleradamente. A expectativa é que, em poucos anos, essa verdadeira revolução chegue a hospitais do mundo inteiro.</p>
-  
+  <header>
+    <div class="logo">
+      <span>N</span>
+    </div>
+    <h1>Portal Notícias</h1>
+  </header>
+
+  <main>
+    <article>
+      <h1>Descoberta Científica Revoluciona a Medicina Moderna</h1>
+      <h2>Novas técnicas genéticas prometem tratamentos personalizados e mais eficazes</h2>
+      <p>A <span class="strong">comunidade científica</span> está em êxtase após a divulgação dos resultados de um estudo que pode transformar o tratamento de doenças crônicas. A pesquisa, realizada por uma equipe internacional, utiliza técnicas avançadas de edição genética para criar terapias sob medida para pacientes.</p>
+      <p>O método, aprimorado recentemente, possibilita uma <span class="underline">correção precisa de mutações</span> em células afetadas, tornando o tratamento <span class="italic">mais seguro</span> e com menos efeitos colaterais.</p>
+      <p>Especialistas afirmam que esse avanço pode beneficiar milhões de pessoas com doenças como câncer, fibrose cística e distúrbios hereditários. Além disso, o processo é consideravelmente mais rápido e acessível do que métodos tradicionais.</p>
+      <p class="highlight">Enquanto a tecnologia ainda está em fase de testes clínicos, as perspectivas são otimistas, e o investimento em pesquisas está crescendo aceleradamente. A expectativa é que nos próximos anos essa técnica esteja disponível para uso amplo.</p>
+    </article>
+    <!-- Você pode adicionar mais artigos aqui, se desejar -->
+  </main>
+
+  <footer>
+    <div class="small-text">Siga-nos nas redes sociais:</div>
+    <ul class="social-links">
+      <li><a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></li>
+      <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+    </ul>
+    <div class="small-text">&copy; 2025 Portal Notícias</div>
+  </footer>
 </body>
 </html>
 
