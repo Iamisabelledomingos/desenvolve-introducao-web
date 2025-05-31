@@ -1,1 +1,82 @@
-
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria de Filmes Favoritos</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1e1e1e; color: #fff; }
+        h1 { text-align: center; }
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            margin: 40px 0;
+        }
+        .filme {
+            width: 220px;
+            text-align: center;
+            background: #2d2d2d;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px #0006;
+            padding: 12px;
+            transition: transform 0.2s;
+        }
+        .filme:hover {
+            transform: scale(1.05);
+        }
+        .filme img {
+            width: 200px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .titulo {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #a0e6ff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galeria de Filmes Favoritos</h1>
+    <div class="galeria">
+        <div class="filme">
+            <a href="https://pt.wikipedia.org/wiki/Interestelar" target="_blank">
+                <img src="imagens/interestelar.jpg" alt="Interestelar">
+                <div class="titulo">Interestelar</div>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="https://pt.wikipedia.org/wiki/Clube_da_Luta" target="_blank">
+                <img src="imagens/clubedaluta.jpg" alt="Clube da Luta">
+                <div class="titulo">Clube da Luta</div>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="https://pt.wikipedia.org/wiki/O_Senhor_dos_An%C3%A9is:_A_Sociedade_do_Anel" target="_blank">
+                <img src="imagens/senhor-dos-aneis.jpg" alt="O Senhor dos Anéis: A Sociedade do Anel">
+                <div class="titulo">O Senhor dos Anéis</div>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="https://pt.wikipedia.org/wiki/Matrix" target="_blank">
+                <img src="imagens/matrix.jpg" alt="Matrix">
+                <div class="titulo">Matrix</div>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="https://pt.wikipedia.org/wiki/Forrest_Gump" target="_blank">
+                <img src="imagens/forrestgump.jpg" alt="Forrest Gump">
+                <div class="titulo">Forrest Gump</div>
+            </a>
+        </div>
+        <div class="filme">
+            <a href="https://pt.wikipedia.org/wiki/A_Origem" target="_blank">
+                <img src="imagens/aorigem.jpg" alt="A Origem">
+                <div class="titulo">A Origem</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
