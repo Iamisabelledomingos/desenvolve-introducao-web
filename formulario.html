@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Pesquisa de Satisfação</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        .pergunta {
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background: #1976d2;
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pesquisa de Satisfação</h1>
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" placeholder="(99) 99999-9999">
+        </fieldset>
+
+        <fieldset>
+            <legend>Pesquisa</legend>
+
+            <div class="pergunta">
+                <label>1. Como você avalia a qualidade do nosso atendimento?</label>
+                <input type="radio" id="atendimento-otimo" name="atendimento" value="Ótimo" required>
+                <label for="atendimento-otimo">Ótimo</label>
+                <input type="radio" id="atendimento-bom" name="atendimento" value="Bom">
+                <label for="atendimento-bom">Bom</label>
+                <input type="radio" id="atendimento-regular" name="atendimento" value="Regular">
+                <label for="atendimento-regular">Regular</label>
+                <input type="radio" id="atendimento-ruim" name="atendimento" value="Ruim">
+                <label for="atendimento-ruim">Ruim</label>
+            </div>
+
+            <div class="pergunta">
+                <label>2. Você recomendaria nossos serviços a outras pessoas?</label>
+                <input type="radio" id="recomendaria-sim" name="recomendaria" value="Sim" required>
+                <label for="recomendaria-sim">Sim</label>
+                <input type="radio" id="recomendaria-nao" name="recomendaria" value="Não">
+                <label for="recomendaria-nao">Não</label>
+            </div>
+
+            <div class="pergunta">
+                <label for="frequencia">3. Com que frequência você utiliza nossos serviços?</label>
+                <select id="frequencia" name="frequencia" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="Sempre">Sempre</option>
+                    <option value="Às vezes">Às vezes</option>
+                    <option value="Raramente">Raramente</option>
+                    <option value="Primeira vez">Primeira vez</option>
+                </select>
+            </div>
+
+            <div class="pergunta">
+                <input type="checkbox" id="compartilhar" name="compartilhar">
+                <label for="compartilhar">Autorizo compartilhar minha resposta com terceiros.</label>
+            </div>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
