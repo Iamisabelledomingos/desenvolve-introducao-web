@@ -1,0 +1,36 @@
+/* 1. Links: padrão vermelho, hover limão */
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff44f; /* Lemon color (lemon yellow, hex code) */
+}
+
+/* 2. Parágrafos */
+/* Todos os parágrafos com fonte Arial */
+p {
+  font-family: Arial, sans-serif;
+}
+
+/* Parágrafos imediatamente após h1 em negrito */
+h1 + p {
+  font-weight: bold;
+}
+
+/* 3. Classe .destaque */
+/* Por padrão, fonte Arial */
+.destaque {
+  font-family: Arial, sans-serif;
+}
+
+/* Se .destaque for atribuída a um parágrafo: negrito */
+p.destaque {
+  font-weight: bold;
+}
+
+/* Se .destaque for atribuída a um <strong>: vermelho */
+strong.destaque {
+  color: red;
+}
