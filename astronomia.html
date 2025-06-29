@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astromia - Estilos CSS</title>
+    <style>
+        /* Estilos para links */
+        a {
+            color: red;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #CFFF04; /* Cor limão/lemon */
+        }
+
+        /* Estilos para parágrafos */
+        p {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 + p {
+            font-weight: bold;
+            color: #003366; /* Azul escuro para combinar com tema espacial */
+        }
+
+        /* Estilos para a classe .destaque */
+        .destaque {
+            font-family: Arial, sans-serif;
+        }
+
+        p.destaque {
+            font-weight: bold;
+            color: #003366;
+        }
+
+        strong.destaque {
+            color: red;
+            font-weight: bolder;
+        }
+
+        /* Estilo para a página de astronomia */
+        body {
+            background-color: #0a0a1a;
+            color: #ffffff;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #4d88ff;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Explorando o Universo</h1>
+    <p>A astronomia nos permite compreender a vastidão do cosmos e nosso lugar nele.</p>
+    
+    <div class="content">
+        <p>Os <a href="#">telescópios espaciais</a> revolucionaram nossa visão do universo, capturando imagens de galáxias distantes e nebulosas espetaculares.</p>
+        
+        <p class="destaque">A busca por exoplanetas é uma das áreas mais emocionantes da astronomia moderna.</p>
+        
+        <p>Nossa galáxia, a <strong class="destaque">Via Láctea</strong>, é apenas uma entre bilhões no universo observável.</p>
+        
+        <p>Saiba mais sobre <a href="#">buracos negros</a>, os objetos mais misteriosos do cosmos.</p>
+    </div>
+
+    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ufmg.br%2Fespacodoconhecimento%2Fpor-que-enviamos-telescopios-ao-espaco%2F&psig=AOvVaw3j7qI2K-vUmDxdCzTlcWYq&ust=1751327158287000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDQ4LLol44DFQAAAAAdAAAAABAE" />
+
+    <footer>
+        <p>Astromia - Descobrindo os mistérios do universo</p>
+    </footer>
+</body>
+</html>
