@@ -2,56 +2,60 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comparação de Cores</title>
+  <title>Exemplo de Fontes e Cores</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    html { font-size: 20px; }
+
+    html h1 { font-size: 2rem; }
+
+    h1 > .principal { font-size: 1.4em; }
+
+    html .secundario { font-size: 1.4rem; }
+
+    /* Estilos para visualização das cores */
+    .cores {
       display: flex;
-      justify-content: center;
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .cor {
+      width: 120px;
+      height: 50px;
+      display: flex;
       align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .color-container {
-      display: flex;
-      gap: 20px;
-      text-align: center;
-    }
-    .color-box {
-      width: 150px;
-      height: 150px;
-      display: flex;
-      flex-direction: column;
       justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .color-label {
-      margin-top: 10px;
+      color: #fff;
       font-weight: bold;
-      background-color: white;
-      padding: 5px 10px;
-      border-radius: 4px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      border: 1px solid #ccc;
+      font-size: 16px;
     }
+    .clara    { background: rgb(224,105,96); }
+    .original { background: rgb(219,78,68);  }
+    .escura   { background: rgb(186,66,58);  }
   </style>
 </head>
 <body>
-  <div class="color-container">
-    <div class="color-box" style="background-color: rgb(186, 66, 58);">
-      <span class="color-label">15% mais escura<br>rgb(186, 66, 58)</span>
-    </div>
-    <div class="color-box" style="background-color: rgb(219, 78, 68);">
-      <span class="color-label">Cor original<br>rgb(219, 78, 68)</span>
-    </div>
-    <div class="color-box" style="background-color: rgb(252, 90, 78);">
-      <span class="color-label">15% mais clara<br>rgb(252, 90, 78)</span>
-    </div>
+  <h1>
+    Exemplo Título
+    <span class="principal">Principal</span>
+  </h1>
+  <div class="secundario">
+    Elemento Secundário
   </div>
+
+  <div class="cores">
+    <div class="cor clara">Clara<br><small>rgb(224,105,96)</small></div>
+    <div class="cor original">Original<br><small>rgb(219,78,68)</small></div>
+    <div class="cor escura">Escura<br><small>rgb(186,66,58)</small></div>
+  </div>
+
+  <p style="margin-top:32px;">
+    <b>Tamanhos finais das fontes:</b><br>
+    h1: <code>40px</code><br>
+    .principal (dentro do h1): <code>56px</code><br>
+    .secundario: <code>28px</code>
+  </p>
 </body>
 </html>
-
-
-
-
