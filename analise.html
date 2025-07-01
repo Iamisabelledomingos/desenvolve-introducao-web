@@ -1,104 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estilo Cósmico</title>
-    <style>
-        /* Estilo geral para links */
-        a {
-            color: #ff0000; /* vermelho padrão */
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: #ccff00; /* limão quando sobreposto */
-        }
-
-        /* Estilo para parágrafos */
-        p {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #e0e0e0;
-            margin-bottom: 15px;
-        }
-
-        /* Parágrafos após h1 */
-        h1 + p {
-            font-weight: bold;
-            color: #ffffff;
-        }
-
-        /* Estilo da classe destaque */
-        .destaque {
-            font-family: Arial, sans-serif;
-        }
-
-        p.destaque {
-            font-weight: bold;
-            color: #4fc3f7; /* azul espacial */
-        }
-
-        strong.destaque {
-            color: #ff0000;
-            font-weight: bolder;
-        }
-
-        /* Tema cósmico */
-        body {
-            background-color: #0a0a2a;
-            background-image: url('https://placehold.co/1920x1080/darkblue/white?text=Cosmic+Background&font=montserrat');
-            background-size: cover;
-            background-attachment: fixed;
-            color: white;
-            padding: 40px;
-            font-family: 'Arial', sans-serif;
-        }
-
-        h1 {
-            color: #ff9d00;
-            margin-top: 30px;
-            font-size: 2.5em;
-            text-shadow: 0 0 10px rgba(255, 157, 0, 0.5);
-        }
-
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: rgba(0, 0, 40, 0.8);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-        }
-
-        .galaxy-decoration {
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #4fc3f7, #ccff00, transparent);
-            margin: 30px 0;
-            opacity: 0.7;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparação de Cores</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .color-container {
+      display: flex;
+      gap: 20px;
+      text-align: center;
+    }
+    .color-box {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .color-label {
+      margin-top: 10px;
+      font-weight: bold;
+      background-color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Explorando o Cosmos</h1>
-        <p>O universo é vasto e cheio de mistérios. Desde os primeiros telescópios até as modernas sondas espaciais, a humanidade sempre buscou entender os segredos do cosmos.</p>
-
-        <div class="galaxy-decoration"></div>
-
-        <p class="destaque">Os <strong class="destaque">buracos negros</strong> são uma das manifestações mais intrigantes da física extrema no universo.</p>
-
-        <p>Conheça mais sobre astronomia visitando nossos <a href="#">links selecionados</a> ou explorando a <a href="#">galeria cósmica</a>.</p>
-
-        <div class="galaxy-decoration"></div>
-
-        <p>As <strong>galáxias</strong> são sistemas gravitacionais que contêm estrelas, restos estelares, meio interestelar, gás e poeira, e matéria escura.</p>
-
-        <p class="destaque">A <strong>Via Láctea</strong> é a galáxia em que vivemos, contendo nosso Sistema Solar entre seus bilhões de estrelas.</p>
-
-        <img src="https://placehold.co/800x400/darkblue/white?text=Nebulosa+Cósmica" alt="Nebulosa colorida com tons de azul, roxo e vermelho mostrando a formação de estrelas" style="width: 100%; border-radius: 8px; margin: 20px 0;">
+  <div class="color-container">
+    <div class="color-box" style="background-color: rgb(186, 66, 58);">
+      <span class="color-label">15% mais escura<br>rgb(186, 66, 58)</span>
     </div>
+    <div class="color-box" style="background-color: rgb(219, 78, 68);">
+      <span class="color-label">Cor original<br>rgb(219, 78, 68)</span>
+    </div>
+    <div class="color-box" style="background-color: rgb(252, 90, 78);">
+      <span class="color-label">15% mais clara<br>rgb(252, 90, 78)</span>
+    </div>
+  </div>
 </body>
 </html>
+
+
