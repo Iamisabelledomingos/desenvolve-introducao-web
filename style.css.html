@@ -1,285 +1,203 @@
-index.html
-/* CSS Zen Garden - "The Beauty of CSS Design"
-   Author: Your Name
-   Theme: Tranquil Enlightenment
-*/
+/*
+ * Este é o seu arquivo CSS para o Zen Garden.
+ * Você pode adicionar e modificar estilos aqui para transformar a aparência da página HTML.
+ * Lembre-se de que o HTML permanece o mesmo, apenas o CSS muda!
+ */
 
-/* Reset and base styles */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Georgia', 'Times New Roman', Times, serif;
-  background: linear-gradient(135deg, #e3f0e8 0%, #f0ede3 100%);
-  color: #384436;
-  min-height: 100%;
+/* Definição de variáveis CSS para cores */
+:root {
+    --cor-fundo: #E0FFFF; /* Azul claro muito suave (Light Cyan) */
+    --cor-fonte-principal: #36454F; /* Azul escuro quase preto (Charcoal) */
+    --cor-destaque: #4682B4; /* Azul aço (Steel Blue) */
 }
 
+/* Estilo para o corpo da página */
 body {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 40px 30px 60px 30px;
-  background: rgba(255,255,255,0.95);
-  border-radius: 18px;
-  box-shadow: 0 10px 60px rgba(120, 160, 140, 0.13), 0 1.5px 10px rgba(60,80,70,0.03);
+    background-color: var(--cor-fundo); /* Usa a variável para a cor de fundo */
+    font-family: 'Inter', sans-serif; /* Usando a fonte Inter para melhor legibilidade */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--cor-fonte-principal); /* Usa a variável para a cor de texto padrão */
 }
 
-/* Header and Main Title */
-header, .header, h1, h2, h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700;
-  letter-spacing: 1.5px;
+/* Estilo para o contêiner principal da página */
+.page-wrapper {
+    max-width: 1200px; /* Largura máxima para o conteúdo */
+    margin: 20px auto; /* Centraliza o wrapper na página e adiciona margem superior/inferior */
+    padding: 20px;
+    background-color: #fff; /* Fundo branco para o conteúdo principal */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex; /* Usa flexbox para o layout principal */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
 }
 
-h1 {
-  font-size: 3rem;
-  margin-top: 0;
-  margin-bottom: 0.3em;
-  color: #3a5b4c;
-  text-shadow: 0 2px 12px #e2f9f0;
+/* Estilo para a seção de introdução */
+.intro {
+    flex: 2; /* Ocupa mais espaço na tela */
+    padding-right: 20px; /* Espaçamento à direita */
+    margin-bottom: 20px; /* Margem inferior */
 }
 
-h2 {
-  font-size: 2rem;
-  margin: 1.7em 0 0.7em;
-  color: #6e8c5e;
-  border-left: 6px solid #aadbb7;
-  padding-left: 14px;
-  background: linear-gradient(to right, #e7f4ee 60%, transparent);
-  border-radius: 0 14px 14px 0;
+.intro header {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-h3 {
-  font-size: 1.3rem;
-  color: #4d7359;
-  margin-top: 2em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.intro h1 {
+    font-size: 3em;
+    color: var(--cor-destaque); /* Usa a variável para o título principal */
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Adiciona um destaque branco ao título */
 }
 
-/* Decorative lines */
-hr {
-  border: 0;
-  height: 2px;
-  background: linear-gradient(to right, #aadbb7 0%, #e3f0e8 100%);
-  margin: 2em 0;
-  opacity: 0.7;
+.intro h2 {
+    font-size: 1.5em;
+    color: #007bff; /* Azul padrão para o subtítulo */
+    font-weight: normal;
 }
 
-/* Section styling */
-section, .section {
-  margin-bottom: 2.5em;
-  padding: 1.5em 1.5em 1.5em 2.1em;
-  border-radius: 12px;
-  background: rgba(173, 219, 183, 0.07);
-  box-shadow: 0 2px 18px rgba(110, 140, 120, 0.06);
+/* Estilo para os parágrafos de resumo e preâmbulo */
+.summary p, .preamble p {
+    margin-bottom: 15px;
 }
 
-section:last-child {
-  margin-bottom: 0;
-}
-
-/* Paragraphs, links and emphasis */
-p {
-  line-height: 1.7;
-  font-size: 1.09rem;
-  margin-top: 0;
-  margin-bottom: 1.3em;
-}
-
+/* Estilo para os links */
 a {
-  color: #25695a;
-  text-decoration: none;
-  padding-bottom: 1px;
-  border-bottom: 1.5px solid #aadbb7;
-  transition: color 0.18s, border 0.18s;
+    color: var(--cor-destaque); /* Usa a variável para a cor dos links */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-a:hover, a:focus {
-  color: #3a5b4c;
-  border-bottom: 2px solid #25695a;
-  background: #e3f0e8;
-  border-radius: 3px;
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
 
-strong, b {
-  color: #2c6b4e;
-  font-weight: 600;
+/* Estilo para a seção principal de suporte (conteúdo) */
+.main.supporting {
+    flex: 3; /* Ocupa mais espaço que a barra lateral */
+    padding-right: 20px;
+    margin-bottom: 20px;
 }
 
-/* "Select a Design" and navigation */
-nav, .design-list, .resources, .archives {
-  margin-top: 2.2em;
-  padding: 1.2em 1.5em;
-  background: linear-gradient(90deg, #e3f0e8 60%, #daf3e3 100%);
-  border-radius: 12px;
-  box-shadow: 0 1px 8px rgba(150, 170, 160, 0.07);
+.main.supporting h3 {
+    font-size: 1.8em;
+    color: var(--cor-destaque); /* Usa a variável para os títulos de seção */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee; /* Linha inferior para os títulos de seção */
+    padding-bottom: 10px;
 }
 
-nav h3, .design-list h3, .resources h3, .archives h3 {
-  margin-top: 0;
-  margin-bottom: 0.8em;
-  color: #398069;
-  font-size: 1.13rem;
+/* Estilo para o rodapé */
+footer {
+    width: 100%; /* Ocupa a largura total */
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    color: var(--cor-fonte-principal); /* Usa a variável para a cor do texto do rodapé */
 }
 
-nav ul, .design-list ul, .resources ul, .archives ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+footer a {
+    margin: 0 10px;
+    font-weight: bold;
 }
 
-nav ul li, .design-list ul li, .resources ul li, .archives ul li {
-  display: inline-block;
-  margin: 0.4em 1.3em 0.4em 0;
-  font-size: 1.02rem;
+/* Estilo para a barra lateral */
+.sidebar {
+    flex: 1; /* Ocupa menos espaço */
+    background-color: #f8f9fa; /* Fundo mais claro para a barra lateral */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
-nav ul li a, .design-list ul li a, .resources ul li a, .archives ul li a {
-  color: #3d5e4b;
-  border-bottom: 1px dotted #aadbb7;
-  transition: color 0.18s, border 0.18s;
-  font-weight: 500;
+.sidebar h3 {
+    font-size: 1.4em;
+    color: var(--cor-destaque); /* Usa a variável para os títulos da barra lateral */
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 
-nav ul li a:hover, .design-list ul li a:hover, .resources ul li a:hover, .archives ul li a:hover {
-  color: #135c42;
-  border-bottom: 2px solid #3d5e4b;
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
 }
 
-/* Footer */
-footer, .footer {
-  margin-top: 3.5em;
-  padding-top: 2em;
-  font-size: 0.98rem;
-  color: #8a9c8c;
-  text-align: center;
-  border-top: 1.5px solid #c4e5d2;
+.sidebar li {
+    margin-bottom: 10px;
 }
 
-footer a, .footer a {
-  color: #6e8c5e;
-  border-bottom: 1px dashed #aadbb7;
+.sidebar a {
+    display: block;
+    padding: 8px 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    color: var(--cor-fonte-principal); /* Usa a variável para a cor dos links da barra lateral */
+    transition: background-color 0.3s ease;
 }
 
-/* Callout and highlighted boxes */
-.callout, .highlight, .tips {
-  background: linear-gradient(90deg, #e7f2e9 80%, #cfeada 100%);
-  border-left: 5px solid #79b08a;
-  padding: 1.1em 1.5em;
-  margin: 2em 0;
-  border-radius: 9px;
-  box-shadow: 0 1px 4px rgba(120, 170, 130, 0.07);
-  color: #2c5d44;
-  font-style: italic;
+a:hover {
+    background-color: #dee2e6;
+    text-decoration: none;
 }
 
-/* Code and buttons */
-code, pre {
-  font-family: 'Fira Mono', 'Courier New', monospace;
-  background: #eef9f3;
-  color: #307455;
-  padding: 0.18em 0.35em;
-  border-radius: 5px;
-  font-size: 0.97em;
+.sidebar .designer-name {
+    font-size: 0.9em;
+    color: #6c757d;
 }
 
-button, .button, input[type="submit"] {
-  background: linear-gradient(90deg, #aadbb7 70%, #e3f0e8 100%);
-  color: #225b3a;
-  font-weight: 600;
-  border: none;
-  border-radius: 6px;
-  padding: 0.7em 1.5em;
-  font-size: 1rem;
-  margin: 0.5em 0.2em;
-  box-shadow: 0 1.5px 8px rgba(50,80,60,0.04);
-  transition: background 0.18s, color 0.18s;
-  cursor: pointer;
+/* Estilos para as divs extras (mantidas por compatibilidade histórica) */
+.extra1, .extra2, .extra3, .extra4, .extra5, .extra6 {
+    /* Estas divs são para compatibilidade.
+       Em designs modernos, é preferível usar ::before e ::after para elementos decorativos. */
+    display: none; /* Oculta-as por padrão, a menos que um design as use especificamente */
 }
 
-button:hover, .button:hover, input[type="submit"]:hover {
-  background: linear-gradient(90deg, #7dcfa3 90%, #e3f0e8 100%);
-  color: #185c3e;
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .page-wrapper {
+        flex-direction: column; /* Empilha os elementos em telas menores */
+        padding: 10px;
+    }
+
+    .intro, .main.supporting, .sidebar {
+        flex: none; /* Remove a flexibilidade em telas menores */
+        width: 100%; /* Ocupa a largura total */
+        padding-right: 0; /* Remove padding extra */
+    }
+
+    .intro header {
+        text-align: left; /* Alinha o cabeçalho à esquerda em telas menores */
+    }
+
+    .intro h1 {
+        font-size: 2.5em;
+    }
+
+    .intro h2 {
+        font-size: 1.2em;
+    }
+
+    .main.supporting h3 {
+        font-size: 1.5em;
+    }
 }
 
-/* Responsive design */
-@media (max-width: 700px) {
-  body {
-    max-width: 98%;
-    padding: 18px 3vw 30px 3vw;
-    font-size: 1em;
-  }
-  h1 {
-    font-size: 2.1rem;
-  }
-  h2 {
-    font-size: 1.25rem;
-    padding-left: 8px;
-  }
-  nav, .design-list, .resources, .archives {
-    padding: 0.8em 0.6em;
-  }
-}
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 2em;
+    }
 
-/* Subtle zen garden background motif */
-body::before {
-  content: "";
-  position: fixed;
-  top: -80px;
-  left: -80px;
-  width: 750px;
-  height: 750px;
-  z-index: 0;
-  background: radial-gradient(circle at 45% 45%, #bde5c1 0%, #e3f0e8 70%);
-  opacity: 0.18;
-  pointer-events: none;
-  filter: blur(2.5px);
-}
+    .intro h2 {
+        font-size: 1em;
+    }
 
-body::after {
-  content: "";
-  position: fixed;
-  bottom: -120px;
-  right: -120px;
-  width: 650px;
-  height: 650px;
-  z-index: 0;
-  background: radial-gradient(circle at 60% 60%, #f0eede 0%, #e3f0e8 90%);
-  opacity: 0.13;
-  pointer-events: none;
-  filter: blur(2.5px);
-}
-
-/* Accessibility: focus */
-a:focus, button:focus, input[type="submit"]:focus {
-  outline: 2.5px solid #aadbb7;
-  outline-offset: 2px;
-  background: #e7f4ee;
-}
-
-/* Miscellaneous */
-blockquote {
-  font-style: italic;
-  color: #64856d;
-  border-left: 4px solid #aadbb7;
-  margin: 1.4em 0;
-  padding-left: 1.2em;
-  background: #f1f8f3;
-  border-radius: 4px;
-}
-
-img {
-  max-width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 1px 6px rgba(90,120,90,0.09);
-}
-
-::-webkit-scrollbar {
-  width: 9px;
-  background: #e3f0e8;
-}
-::-webkit-scrollbar-thumb {
-  background: #aadbb7;
-  border-radius: 6px;
+    .main.supporting h3 {
+        font-size: 1.3em;
+    }
 }
