@@ -16,52 +16,9 @@
             padding: 0;
             font-family: sans-serif;
             background: #ACF593;
-            color: #D9A0BB;
+            color: #000000;
         }
-        <head>
-    ...
-    <style>
-        /* Outras regras CSS já existentes */
-
-        /* Cole o novo código aqui */
-        .page-wrapper {
-            position: relative;
-        }
-
-        .explanation {
-            width: 60%;
-            margin-right: 35%;
-            border-right: 1px solid #1f295c;
-            padding-right: 2%;
-            box-sizing: border-box;
-        }
-
-        .sidebar {
-            position: absolute;
-            top: 560px;
-            left: 62%;
-            width: 35%;
-            padding: 0 2%;
-            box-sizing: border-box;
-            text-align: center;
-        }
-    </style>
-</head>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      body {
+        body {
             width: 80vw;
             max-width: 1280px;
             margin: 0 auto;
@@ -69,6 +26,9 @@
         .page-wrapper {
             width: 100%;
             margin: 0 auto;
+            position: relative; /* Establishes positioning context for absolute children */
+            min-height: 100vh; /* Ensures full viewport height */
+            overflow: hidden; /* Prevents scroll issues with positioned elements */
         }
         p {
             text-indent: 1em;
@@ -119,10 +79,10 @@
             background-color: #B4F279;
         }
         .destaque {
-            color: #D9BFA0;
+            color: #000000;
         }
         .design-grafico-5-hex {
-            color: #BF8D7A;
+            color: #000000;
         }
 
         /* ----------- NOVAS DIRETIVAS ----------- */
@@ -145,9 +105,21 @@
             justify-content: flex-start;
         }
 
-        /* Remove #design-archives se existir */
+        /* Design archives menu */
         #design-archives {
-            display: none !important;
+            display: block !important;
+            position: absolute;
+            top: 560px;
+            left: 62%;
+            width: 33%;
+            padding: 2%;
+            box-sizing: border-box;
+            background-color: rgba(255,255,255,0.1);
+            border-left: 1px solid #1f295c;
+            z-index: 2;
+            transition: all 0.3s ease;
+            border-radius: 8px 0 0 8px; /* Rounded left corners */
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1); /* Subtle shadow */
         }
 
         /* 2. Cabeçalho incrementado */
@@ -223,6 +195,22 @@
         /* Ajuste para espaçamento externo do rodapé */
         footer {
             margin-top: 4%;
+        }
+
+        /* Explanation panel styling */
+        .explanation {
+            width: 60%;
+            margin-right: 35%;
+            border-right: 1px solid #1f295c;
+            padding-right: 2%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1; /* Ensures content stays above other elements */
+            background-color: rgba(255,255,255,0.1); /* Subtle background */
+            padding-left: 2%; /* Balanced padding */
+            padding-top: 1%;
+            padding-bottom: 2%;
+            transition: all 0.3s ease; /* Smooth transitions for responsive changes */
         }
     </style>
 </head>
