@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Zen Garden: The Beauty of CSS Design</title>
+    <link rel="stylesheet" media="screen" href="style.css?v=8may2013">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Dave Shea">
+    <meta name="description" content="A demonstration of what can be accomplished visually through CSS-based design.">
+    <meta name="robots" content="all">
+    <style>
+        /* 1. Aspectos gerais */
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: #ACF593;
+            color: #000000;
+        }
+        body {
+            width: 80vw;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .page-wrapper {
+            width: 100%;
+            margin: 0 auto;
+            position: relative; /* Establishes positioning context for absolute children */
+            min-height: 100vh; /* Ensures full viewport height */
+            overflow: hidden; /* Prevents scroll issues with positioned elements */
+        }
+        p {
+            text-indent: 1em;
+        }
+
+        /* 2. Títulos */
+        h1, h2, h3 {
+            text-align: left;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            padding-left: 1em;
+            flex: 0 1 auto;
+        }
+        h2 {
+            font-size: 1.4rem;
+            margin: 0;
+            flex: 0 1 auto;
+        }
+        h3 {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        /* 3. Seções de resumo e principal */
+        #zen-summary {
+            text-align: center;
+        }
+        .preamble p,
+        .explanation p,
+        .participation p,
+        .benefits p,
+        .requirements p {
+            line-height: 1.5;
+        }
+
+        /* 4. Abreviaturas */
+        abbr {
+            font-variant: small-caps;
+        }
+
+        /* Seu tema existente */
+        .principal {
+            color: #fff;
+        }
+        .background {
+            background-color: #B4F279;
+        }
+        .destaque {
+            color: #000000;
+        }
+        .design-grafico-5-hex {
+            color: #000000;
+        }
+
+        /* ----------- NOVAS DIRETIVAS ----------- */
+
+        /* 1. Ajuste da página e centralização */
+        body, .page-wrapper {
+            width: 80vw;
+            max-width: 1280px;
+            min-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /* Seção de introdução com altura fixa */
+        .intro#zen-intro {
+            height: 550px;
+            min-height: 550px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        /* Design archives menu */
+        #design-archives {
+            display: block !important;
+            position: absolute;
+            top: 560px;
+            left: 62%;
+            width: 33%;
+            padding: 2%;
+            box-sizing: border-box;
+            background-color: rgba(255,255,255,0.1);
+            border-left: 1px solid #1f295c;
+            z-index: 2;
+            transition: all 0.3s ease;
+            border-radius: 8px 0 0 8px; /* Rounded left corners */
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1); /* Subtle shadow */
+        }
+
+        /* 2. Cabeçalho incrementado */
+        .intro header[role="banner"] {
+            background: #222;
+            color: #fff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 2em;
+            padding-bottom: 2em;
+            margin-bottom: 2em;
+            border-radius: 8px;
+        }
+        .intro header h1.principal {
+            color: #fff;
+            margin-right: 2em;
+            padding-left: 1em;
+        }
+        .intro header h2.destaque {
+            color: #D9BFA0;
+        }
+
+        /* 3. Menus */
+        /* Supondo que os menus estão em .sidebar ul ou .sidebar-menu ul */
+        .sidebar ul,
+        .sidebar-menu ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .sidebar li,
+        .sidebar-menu li {
+            margin-bottom: 1em;
+            margin-top: 1em;
+            text-align: center;
+        }
+        .sidebar ul li:last-child,
+        .sidebar-menu ul li:last-child {
+            margin-bottom: 0;
+        }
+        .sidebar ul li:first-child,
+        .sidebar-menu ul li:first-child {
+            margin-top: 0;
+        }
+
+        /* 4. Rodapé invertido */
+        footer {
+            background: #222;
+            color: #fff;
+            margin: 4% 0 0 0;
+            padding: 2em 0;
+            text-align: center;
+            /* Flexbox para o rodapé */
+            display: flex; /* Aplica flexbox */
+            justify-content: center; /* Centraliza os itens horizontalmente */
+            flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+            gap: 1em; /* Espaçamento entre os links */
+        }
+        footer a {
+            display: inline-block;
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 0.5em 1em;
+            margin: 0 0.5em; /* Mantém a margem original para espaçamento externo */
+            border-radius: 6px;
+            text-decoration: none;
+            background: transparent;
+            transition: background 0.2s, color 0.2s;
+            /* Define um tamanho para os links e tratamento de quebra de linha */
+            min-width: 80px; /* Tamanho mínimo para os links */
+            flex-grow: 1; /* Permite que os links cresçam para preencher o espaço disponível */
+            flex-basis: auto; /* Permite que os links encolham e se ajustem */
+        }
+        footer a:hover,
+        footer a:focus {
+            background: #fff;
+            color: #222;
+        }
+
+        /* Ajuste para espaçamento externo do rodapé */
+        footer {
+            margin-top: 4%;
+        }
+
+        /* Explanation panel styling */
+        .explanation {
+            width: 60%;
+            margin-right: 35%;
+            border-right: 1px solid #1f295c;
+            padding-right: 2%;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1; /* Ensures content stays above other elements */
+            background-color: rgba(255,255,255,0.1); /* Subtle background */
+            padding-left: 2%; /* Balanced padding */
+            padding-top: 1%;
+            padding-bottom: 2%;
+            transition: all 0.3s ease; /* Smooth transitions for responsive changes */
+        }
+
+        /* Flexbox para a seção de benefícios */
+        .benefits {
+            display: flex; /* Aplica flexbox */
+            align-items: center; /* Centraliza verticalmente os itens */
+            border-top: 1px solid #1f295c; /* Linha no topo */
+            border-bottom: 1px solid #1f295c; /* Linha embaixo */
+            padding: 1em 0; /* Adiciona padding para as bordas não ficarem coladas */
+        }
+        .benefits h3 {
+            flex: 0 0 30%; /* Título ocupa 30% da largura */
+            text-align: center; /* Centraliza o texto do título */
+            margin: 0; /* Remove margens padrão do h3 */
+        }
+        .benefits-content { /* Adicionei uma div para agrupar o texto */
+            flex: 0 0 70%; /* Texto ocupa 70% da largura */
+            padding-right: 1em; /* Espaçamento entre o texto e o título */
+        }
+
+        /* Flexbox para a seção de participação */
+        .participation {
+            display: flex; /* Aplica flexbox */
+            flex-wrap: wrap; /* Permite que os itens quebrem a linha */
+            align-items: center; /* Centraliza verticalmente os itens */
+            /* Removendo a borda superior para evitar duplicação com a borda inferior de benefits */
+            /* border-top: 1px solid #1f295c; */
+            border-bottom: 1px solid #1f295c; /* Linha embaixo */
+            padding: 1em 0; /* Adiciona padding para as bordas não ficarem coladas */
+        }
+        .participation h3 {
+            flex: 0 0 50%; /* Título ocupa 50% do espaço */
+            text-align: center; /* Centraliza o texto do título */
+            margin: 0; /* Remove margens padrão do h3 */
+        }
+        .participation p {
+            flex: 0 0 50%; /* Cada parágrafo ocupa 50% do espaço */
+            text-indent: 0; /* Remove text-indent para parágrafos dentro do flexbox */
+            padding: 0 1em; /* Adiciona padding para melhor visualização */
+        }
+        /* Ajuste para o primeiro parágrafo da participação para evitar quebra de linha indesejada */
+        .participation p:first-of-type {
+            padding-left: 0;
+        }
+        /* Ajuste para o segundo parágrafo da participação */
+        .participation p:nth-of-type(2) {
+            padding-right: 0;
+        }
+        /* Para garantir que os parágrafos se alinhem corretamente em duas colunas */
+        .participation p:nth-of-type(odd) {
+            padding-right: 0.5em;
+        }
+        .participation p:nth-of-type(even) {
+            padding-left: 0.5em;
+        }
+        /* Se houver um número ímpar de parágrafos, o último ocupará 100% */
+        .participation p:last-of-type:nth-child(odd) {
+            flex: 0 0 100%;
+            text-align: center;
+            padding: 0;
+        }
+
+        /* --- Customizações Adicionadas --- */
+
+        /* 1. Customização da Aparência dos Links */
+        a {
+            color: #000000; /* Cor de destaque (preto, conforme .destaque) */
+            font-weight: bold;
+            text-decoration: none; /* Remove sublinhado padrão */
+        }
+
+        a:hover {
+            color: #555555; /* Tonalidade mais escura para o hover */
+        }
+
+        a:visited {
+            font-weight: normal; /* Remove negrito para links visitados */
+        }
+
+        /* 2. Destaque da Primeira Letra do Primeiro Parágrafo da Seção Principal */
+        .main.supporting .explanation p:first-of-type::first-letter {
+            font-size: 3em; /* 3 vezes maior que o padrão */
+            font-family: 'Georgia', serif; /* Fonte diferente, exemplo: Georgia */
+            float: left; /* Flutua à esquerda */
+            margin-right: 0.1em; /* Pequena margem para separar do texto */
+            line-height: 1; /* Ajusta a altura da linha para evitar espaçamento excessivo */
+        }
+
+        /* 3. Separadores no Menu de Design */
+        #design-archives li {
+            border-top: 1px solid #1f295c; /* Cor da borda conforme o contexto existente */
+            padding-top: 0.5em; /* Espaçamento acima da borda */
+            padding-bottom: 0.5em; /* Espaçamento abaixo da borda */
+        }
+
+        #design-archives li:last-child {
+            border-bottom: 1px solid #1f295c; /* Borda inferior */
+        }
+
+    </style>
+</head>
+
+<body id="css-zen-garden" class="background">
+    <div class="page-wrapper">
+
+        <section class="intro" id="zen-intro">
+            <header role="banner">
+                <h1 class="principal">CSS Zen Garden</h1>
+                <h2 class="destaque">The Beauty of <abbr title="Cascading Style Sheets">CSS</abbr> Design</h2>
+            </header>
+
+            <div class="summary" id="zen-summary" role="article">
+                <p>A demonstration of what can be accomplished through <abbr title="Cascading Style Sheets">CSS</abbr>-based design. Select any style sheet from the list to load it into this page.</p>
+                <p>Download the example <a href="/examples/index" title="This page's source HTML code, not to be modified.">html file</a> and <a href="/examples/style.css" title="This page's sample CSS file, the file you may modify.">css file</a>.</p>
+            </div>
+
+            <div class="preamble" id="zen-preamble" role="article">
+                <h3 class="design-grafico-5-hex">The Road to Enlightenment</h3>
+                <p>Littering a dark and dreary road lay the past relics of browser-specific tags, incompatible <abbr title="Document Object Model">DOM</abbr>s, broken <abbr title="Cascading Style Sheets">CSS</abbr> support. We must clear the mind of the past. Web enlightenment has been achieved thanks to the tireless efforts of folk like the <abbr title="World Wide Web Consortium">W3C</abbr>, <abbr title="Web Standards Project">WaSP</abbr>, and the major browser creators.</p>
+                <p>The CSS Zen Garden invites you to relax and meditate on the important lessons of the masters. Begin to see with clarity. Learn to use the time-honored techniques in new and invigorating fashion. Become one with the web.</p>
+            </div>
+        </section>
+
+        <div class="main supporting" id="zen-supporting" role="main">
+            <div class="explanation" id="zen-explanation" role="article">
+                <h3 class="destaque">So What is This About?</h3>
+                <p>There is a continuing need to show the power of <abbr title="Cascading Style Sheets">CSS</abbr>. The Zen Garden aims to excite, inspire, and encourage participation. To begin, view the selected style sheets in the list. Clicking any will apply it to this page.</p>
+                <p><abbr title="Cascading Style Sheets">CSS</abbr> allows complete and total control over the style of a hypertext document. The only way this can be illustrated in a way that gets people excited is by demonstrating it in real-world action. Designers and coders alike can participate.</p>
+            </div>
+
+            <div class="participation" id="zen-participation" role="article">
+                <h3 class="destaque">Participation</h3>
+                <p><span style="text-transform: uppercase;">S</span>trong visual design has always been our focus. You are modifying this page, so strong <abbr title="Cascading Style Sheets">CSS</abbr> skills are necessary too, but the example files are commented and the code is clean and straightforward. Download the sample HTML and CSS and give it a try.</p>
+                <p>You may modify the style sheet in any way you wish, but not the <abbr title="HyperText Markup Language">HTML</abbr>. This may seem daunting at first if you’ve never worked this way before, but follow the listed guidelines and you’ll be fine.</p>
+                <p>Download the sample <a href="/examples/index" title="This page's source HTML code, not to be modified.">HTML</a> and <a href="/examples/style.css" title="This page's sample CSS, the file you may modify.">CSS</a> files to work on your own version.</p>
+            </div>
+
+            <div class="benefits" id="zen-benefits" role="article">
+                <h3 class="destaque">Benefits</h3>
+                <div class="benefits-content">
+                    <p>Why participate? For recognition, inspiration, and a resource we can all refer to showing people how amazing <abbr title="Cascading Style Sheets">CSS</abbr> really can be. This site serves as a demonstration and a learning tool.</p>
+                </div>
+            </div>
+
+            <div class="requirements" id="zen-requirements" role="article">
+                <h3 class="destaque">Requirements</h3>
+                <p>Where possible, we would like to see mostly <abbr title="Cascading Style Sheets, levels 1 and 2">CSS 1 &amp; 2</abbr> usage. <abbr title="Cascading Style Sheets, levels 3 and 4">CSS3 &amp; 4</abbr> should be handled with care and consideration for backward compatibility.</p>
+                <p>Luckily, designing this way shows how well various browsers have implemented <abbr title="Cascading Style Sheets">CSS</abbr> by now. When sticking to the guidelines you should see fewer inconsistencies and more harmony across browsers.</p>
+                <p>We ask that you submit original artwork. Please respect copyright laws. Please keep objectionable material to a minimum, and try to incorporate unique and interesting visual themes into your design.</p>
+                <p>This is a learning exercise as well as a demonstration. You retain full copyright on your graphics (with limited exceptions, see <a href="/pages/submit/guidelines/">submission guidelines</a>).</p>
+                <p role="contentinfo">By <a href="http://www.mezzoblue.com/">Dave Shea</a>. Bandwidth graciously donated by <a href="http://www.mediatemple.net/">mediatemple</a>. Now available: <a href="http://www.csszengarden.com/">CSS Zen Garden</a> book, <a href="http://store.newriders.com/product/0321303474">New Riders</a>.</p>
+            </div>
+        </div>
+
+        <footer>
+            <a href="http://validator.w3.org/check/referer" title="Check the validity of this site&#8217;s HTML" class="zen-validate-html">HTML</a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Check the validity of this site&#8217;s CSS" class="zen-validate-css">CSS</a>
+            <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" title="View the Creative Commons license of this site: Attribution-NonCommercial-ShareAlike." class="zen-license">CC</a>
+            <a href="http://mezzoblue.com/zengarden/faq/#aaa" title="Read about the accessibility of this site" class="zen-accessibility">A11y</a>
+            <a href="https://github.com/mezzoblue/csszengarden.com" title="Fork this site on Github" class="zen-github">GH</a>
+        </footer>
+
+    </div>
+</body>
+</html>
