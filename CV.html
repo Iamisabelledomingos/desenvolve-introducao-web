@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currículo Isabelle Evelyn Santos Domingos</title>
+  <style>
+    /* Reset and base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f4f4f7;
+      color: #555a74;
+      line-height: 1.5;
+      display: flex;
+      justify-content: center;
+      padding: 30px 15px;
+    }
+    main {
+      background: #e0e0f0;
+      max-width: 750px;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 12px 18px rgba(90, 88, 133, 0.2);
+      padding: 30px 40px 40px 40px;
+      border: 3px solid #9a96b3;
+    }
+    /* Top section - photo and name */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      border-bottom: 3px solid #9a96b3;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    header img {
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border: 3px solid #9a96b3;
+      background-color: #c5c5dc;
+      box-shadow: 1px 1px 8px rgba(77,77,109,0.4);
+    }
+    header h1 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #636794;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      max-width: 600px;
+    }
+    /* Perfil Profissional Section */
+    section#perfil {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    section#perfil h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #636794;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    section#perfil p {
+      font-size: 0.92rem;
+      color: #43435c;
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: justify;
+      letter-spacing: 0.02em;
+      line-height: 1.6;
+    }
+    /* Content grid for EDUCAÇÃO and Experiencia */
+    .content-sections {
+      display: flex;
+      gap: 45px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
+    section#educacao, section#experiencia {
+      flex: 1 1 320px;
+      background: #fafaff;
+      border-radius: 10px;
+      padding: 25px 25px 25px 35px;
+      box-shadow: 3px 4px 7px rgb(122 122 147 / 20%);
+      position: relative;
+      border: 2px solid #bebed8;
+    }
+    section#educacao::before, section#experiencia::before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 10px;
+      width: 18px;
+      height: 18px;
+      background-color: #9a96b3;
+      border-radius: 50%;
+      box-shadow: 0 0 8px 1px #9a96b3aa;
+    }
+    section#educacao h3, section#experiencia h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #636794;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      border-bottom: 1.5px solid #bebed8;
+      padding-bottom: 5px;
+      letter-spacing: 1px;
+    }
+    /* Individual item in EDUCAÇÃO or Experiencia */
+    .item {
+      margin-bottom: 28px;
+      position: relative;
+      padding-left: 40px;
+    }
+    .item:last-child {
+      margin-bottom: 0;
+    }
+    /* small icons in each item */
+    .item-icon {
+      position: absolute;
+      left: 7px;
+      top: 7px;
+      color: #a49dc2;
+      font-size: 20px;
+      filter: drop-shadow(0 0 1px #b7b2d4);
+    }
+    /* Titles of education or job roles */
+    .item-title {
+      font-weight: 600;
+      color: #62627a;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    /* Subtext for periods, description, status */
+    .item-subtext {
+      font-size: 0.875rem;
+      color: #7a7999;
+      line-height: 1.3;
+      margin-bottom: 5px;
+      letter-spacing: 0.02em;
+    }
+    /* Highlight or bold in subtext */
+    .item-subtext strong {
+      color: #464667;
+      font-weight: 600;
+    }
+    /* Contact area - bottom */
+    footer {
+      border-top: 3px solid #9a96b3;
+      padding-top: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #565676;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #65657f;
+    }
+    .contact-item svg {
+      width: 18px;
+      height: 18px;
+      fill: #9a96b3;
+      filter: drop-shadow(0 0 1px #8d8b9e);
+    }
+    /* Scrollbar for smaller screens if needed */
+    @media (max-width: 720px) {
+      main {
+        padding: 20px 25px 30px 25px;
+      }
+      .content-sections {
+        flex-direction: column;
+        gap: 30px;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img 
+        src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/308799b3-b75c-42fe-a010-24d92ddc736b.png" 
+        alt="Retrato da Isabelle Evelyn Santos Domingos jovem mulher com cabelo castanho ondulado, sorrindo levemente, em fundo neutro suave" 
+        loading="lazy"
+        onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/51c5c229-0da6-4425-b069-fdeade29c286.png';"
+      />
+      <h1>ISABELLE EVELYN SANTOS DOMINGOS</h1>
+    </header>
+
+    <section id="perfil" aria-label="Perfil Profissional">
+      <h2>PERFIL PROFISSIONAL</h2>
+      <p>
+        Sou uma pessoa que gosta de se comunicar, sou pró-ativa, gosto de trabalhar em equipe, tenho 17 anos, atualmente sou formada como técnica de planejamento e controle de produção, e faço aprendizagem em Manutenção Mecânica de Máquinas Industriais.
+      </p>
+    </section>
+
+    <div class="content-sections">
+      <section id="educacao" aria-label="Educação">
+        <h3>EDUCAÇÃO</h3>
+
+        <div class="item">
+          <span class="item-icon" aria-hidden="true"></span>
+          <p class="item-title">Ensino Médio</p>
+          <p class="item-subtext">Ainda não obtive a conclusão do ensino médio, pois termino ele neste ano de 2025.</p>
+        </div>
+
+        <div class="item">
+          <span class="item-icon" aria-hidden="true"></span>
+          <p class="item-title">Técnico de planejamento e controle Produção</p>
+          <p class="item-subtext">
+            Tenho Formação técnica em Planejamento e controle da produção pelo Senai CFP PEDRO MARTINS GUERRA.
+          </p>
+        </div>
+
+        <div class="item">
+          <span class="item-icon" aria-hidden="true"></span>
+          <p class="item-title">Aprendizagem em Manutenção Mecânica de Máquinas Industriais</p>
+          <p class="item-subtext">
+            Atualmente faço Aprendizagem de Mecânica de máquinas industriais pelo Senai CFP PEDRO MARTINS GUERRA. (20/01/2025 à 19/12/2025)
+          </p>
+        </div>
+      </section>
+
+      <section id="experiencia" aria-label="Experiência">
+        <h3>Experiência</h3>
+
+        <div class="item">
+          <span class="item-icon" aria-hidden="true"></span>
+          <p class="item-title">Aprendiz na ITAURB ltda.</p>
+          <p class="item-subtext"><strong>Início:</strong> 20 de janeiro 2025</p>
+          <p class="item-subtext"><strong>Fim:</strong> 19 de dezembro 2025</p>
+        </div>
+      </section>
+    </div>
+
+    <footer aria-label="Informações de contato">
+      <div class="contact-item" title="Telefone">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.5 2.5.77 3.85.77a1 1 0 011 1v3.5a1 1 0 01-1 1A19.94 19.94 0 014 6a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.26 2.65.77 3.85a1 1 0 01-.21 1.11z"/></svg>
+        <span>(31) 996488182</span>
+      </div>
+      <div class="contact-item" title="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 3.5l-8 5-8-5V6l8 5 8-5v1.5z"/></svg>
+        <span>Isabelleevelyn30@gmail.com</span>
+      </div>
+      <div class="contact-item" title="Localização">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
+        <span>Itabira, Minas Gerais</span>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
+
